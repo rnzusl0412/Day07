@@ -1,0 +1,56 @@
+1. non_static method를 정의할 수 있다.
+	=>constructor 정의  (생성자)
+	a. 생성자는 클래스이름과 동일 하되 반환형은 없다.
+	b. 생성자는 overload 할 수 있다.
+	c. 생성자는 new 연산자와 함께 객체 생성할 때 단 한번만 호출이 가능하다.
+	d. 생성자는 명시하지 않으면 default 생성자가 제공되고, 명시하게 되면 명시된 생성자를 호출해서 객체를 생성한다.
+	e. 생성자에 사용되는 키워드 this()로 내부 생성자를 호출 할 수 있다.
+	f. 생성자의 목적 : 멤버변수 초기화
+	g. 생성자의 접근 제한자는 public으로 지정한다. 
+	=> 	this():현재 오브젝트를 지칭하는 연산자이며 () 지정하면 내부생성자 호출
+		ex) super() : 선조의 생성자 호출
+		this. : 클래스 안에 메소드에서 지정할 수 있으며 현재 오브젝트 멤버를 명시한다.
+		ex) this.멤버, super.멤버
+	h. 생성자는 상속되지 않는다.
+	
+2. non_static method 원형을 설명할 수 있다. 
+	-void, return 형
+
+3. 상수를 정의 할 수 있다.
+	Math.PI
+	public static final double PI
+	static final = 변수를 상수화 [전역]
+	final = 지역 변수를 상수화 
+	const : 키워드로 사용하진 않는다.
+=========================================================================================
+	public final class Integer : 자손을 확장하지 않겠다.
+	상속 : 기능 = 메소드의 확장
+	
+	public final noid prn(){} : 후손 클래스가 재정의 할 수 없다.
+	
+	재정의 : 선조가 가지고 있는 메소드를 가지고 달느 용도로 활용하겠다. (기능 확장x)
+	
+4. static 생성자를 정의할 수 있다.
+
+5. 클래스 원형을 선언 할 수 있다.
+	java beans - 기능형 x, setter & getter 
+
+6. 클래스를 만들어서 jar로 참조형을 구현 할 수 있다.
+
+7. 클래스 캡슐화 원칙
+
+class = 속성 + 메소드
+	-멤버변수는 은닉화(private), 메소드는 오픈화(default, protected, public)
+	-은닉된 멤버변수에서 오픈된 메소드로 값 전달 및 변경 (void setter) 하고 리턴하는 구조 (return getter)를 만든다. (setter&getter)
+	ex)
+		class Test{
+			private int a;
+			//멤버변수 a에게 값 전달 및 변경
+			public void setA(	){
+				this.a = a;
+			}
+			//값을 리턴하는 구조 
+			public int getA(){
+				return a;
+			}
+		}

@@ -1,0 +1,14 @@
+public class My{
+
+	private My(){
+		res = (a*b)+sqt(c);
+	}
+
+	public My(int res){		//외부에서 res는 무효화
+		this();
+	}
+}
+
+
+public Integer(string)
+public Integer(int)
